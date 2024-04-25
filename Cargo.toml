@@ -1,0 +1,52 @@
+[workspace]
+resolver = "2"
+
+members = [
+    "soroban-env-host",
+    "soroban-env-guest",
+    "soroban-env-common",
+    "soroban-env-common/tests/no_std",
+    "soroban-env-macros",
+    "soroban-builtin-sdk-macros",
+    "soroban-synth-wasm",
+    "soroban-bench-utils",
+]
+
+exclude = ["soroban-test-wasms/wasm-workspace"]
+
+[workspace.package]
+version = "20.0.2"
+
+[workspace.dependencies]
+soroban-env-common = { version = "=20.0.2", path = "soroban-env-common", default-features = false }
+soroban-env-guest = { version = "=20.0.2", path = "soroban-env-guest" }
+soroban-env-host = { version = "=20.0.2", path = "soroban-env-host" }
+soroban-env-macros = { version = "=20.0.2", path = "soroban-env-macros" }
+soroban-builtin-sdk-macros = { version = "=20.0.2", path = "soroban-builtin-sdk-macros" }
+
+# NB: When updating, also update the version in rs-soroban-env dev-dependencies
+[workspace.dependencies.hcnet-xdr]
+version = "=20.0.22"
+git = "https://github.com/shantanu-hashcash/rs-hcnet-xdr"
+rev = "5f70a8bd2e74f252a39ec735245ab27b63b6b915"
+default-features = false
+
+[workspace.dependencies.wasmi]
+package = "soroban-wasmi"
+version = "=0.31.1-soroban.20.0.0"
+git = "https://github.com/shantanu-hashcash/wasmi"
+rev = "a5b00c611cc47be221c65b3906d29ba850bd66f9"
+
+# [patch."https://github.com/hcnet/rs-hcnet-xdr"]
+# hcnet-xdr = { path = "../rs-hcnet-xdr/" }
+# [patch."https://github.com/hcnet/wasmi"]
+# soroban-wasmi = { path = "../wasmi/crates/wasmi/" }
+# soroban-wasmi_core = { path = "../wasmi/crates/core/" }
+
+[profile.release]
+lto = true
+
+[profile.test-opt]
+inherits = "test"
+opt-level = 3
+debug = false
