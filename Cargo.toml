@@ -35,7 +35,7 @@ default-features = false
 package = "soroban-wasmi"
 version = "=0.31.1-soroban.20.0.0"
 git = "https://github.com/shantanu-hashcash/wasmi"
-rev = "a5b00c611cc47be221c65b3906d29ba850bd66f9"
+rev = "fdb7504c315c59a338205a2d2a3b32247456a555"
 
 # [patch."https://github.com/hcnet/rs-hcnet-xdr"]
 # hcnet-xdr = { path = "../rs-hcnet-xdr/" }
