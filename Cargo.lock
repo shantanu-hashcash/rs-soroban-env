@@ -1443,7 +1443,7 @@ version = "20.0.2"
 [[package]]
 name = "soroban-wasmi"
 version = "0.31.1-soroban.20.0.0"
-source = "git+https://github.com/shantanu-hashcash/wasmi?rev=a5b00c611cc47be221c65b3906d29ba850bd66f9#a5b00c611cc47be221c65b3906d29ba850bd66f9"
+source = "git+https://github.com/shantanu-hashcash/wasmi?rev=fdb7504c315c59a338205a2d2a3b32247456a555#fdb7504c315c59a338205a2d2a3b32247456a555"
 dependencies = [
  "smallvec",
  "spin",
@@ -1811,12 +1811,12 @@ dependencies = [
 [[package]]
 name = "wasmi_arena"
 version = "0.4.0"
-source = "git+https://github.com/shantanu-hashcash/wasmi?rev=a5b00c611cc47be221c65b3906d29ba850bd66f9#a5b00c611cc47be221c65b3906d29ba850bd66f9"
+source = "git+https://github.com/shantanu-hashcash/wasmi?rev=fdb7504c315c59a338205a2d2a3b32247456a555#fdb7504c315c59a338205a2d2a3b32247456a555"
 
 [[package]]
 name = "wasmi_core"
 version = "0.13.0"
-source = "git+https://github.com/shantanu-hashcash/wasmi?rev=a5b00c611cc47be221c65b3906d29ba850bd66f9#a5b00c611cc47be221c65b3906d29ba850bd66f9"
+source = "git+https://github.com/shantanu-hashcash/wasmi?rev=fdb7504c315c59a338205a2d2a3b32247456a555#fdb7504c315c59a338205a2d2a3b32247456a555"
 dependencies = [
  "downcast-rs",
  "libm",
